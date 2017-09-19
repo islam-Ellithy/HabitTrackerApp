@@ -24,7 +24,7 @@ public class HabitDbHelper extends SQLiteOpenHelper {
         String SQL_CREATE_PETS_TABLE = "CREATE TABLE " + HabitContract.HabitEntry.TABLE_NAME + " ("
                 + HabitContract.HabitEntry._ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
                 + HabitContract.HabitEntry.COLUMN_TIMES + " INTEGER , "
-                + HabitContract.HabitEntry.COLUMN_HABIT + " TEXT ;";
+                + HabitContract.HabitEntry.COLUMN_HABIT + " TEXT );";
         // Execute the SQL statement
         db.execSQL(SQL_CREATE_PETS_TABLE);
 

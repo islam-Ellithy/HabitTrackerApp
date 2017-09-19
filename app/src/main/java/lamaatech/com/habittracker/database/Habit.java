@@ -11,6 +11,11 @@ public class Habit {
     private String Id;
     private Integer times ;
 
+    public Habit(String habit, Integer times) {
+        this.habit = habit;
+        this.times = times;
+    }
+
     public Habit(Cursor cursor) {
 
     }

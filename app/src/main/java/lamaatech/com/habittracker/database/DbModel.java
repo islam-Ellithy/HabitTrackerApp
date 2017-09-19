@@ -3,9 +3,7 @@ package lamaatech.com.habittracker.database;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
-import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
-import android.util.Log;
 import android.widget.Toast;
 
 import static lamaatech.com.habittracker.database.HabitContract.HabitEntry.TABLE_NAME;
@@ -50,7 +48,7 @@ public class DbModel implements IModel {
         values.put(HabitContract.HabitEntry.COLUMN_HABIT, newHabit.getHabit());
         values.put(HabitContract.HabitEntry.COLUMN_TIMES, newHabit.getTimes());
 
-        db.insert(TABLE_NAME, null, values);
+        long raws = db.insert(TABLE_NAME, null, values);
 
         showToast("Habit has been added successfully");
 
